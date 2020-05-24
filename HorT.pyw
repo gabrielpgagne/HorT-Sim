@@ -1,5 +1,4 @@
 import random as rd
-import time
 
 try:
     import tkinter as tk
@@ -15,6 +14,7 @@ try:
             count = 0
 
         root = tk.Tk()
+        root.title('Heads or Tails app')
         frame = tk.Frame(root)
         frame.pack()
 
@@ -38,6 +38,7 @@ try:
 
 except FileNotFoundError:
     root = tk.Tk()
+    root.title("H or T Setup")
     msg = tk.Label(root, text='Creating necessary files.\n Please restart the app.')
     msg.pack()
 
