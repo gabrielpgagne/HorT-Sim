@@ -12,7 +12,6 @@ try:
             count = f.read()
             count = int(count)
         except Exception as e:
-            print(e)
             count = 0
 
         root = tk.Tk()
@@ -39,7 +38,11 @@ try:
 
 except FileNotFoundError:
     root = tk.Tk()
-    msg = tk.Label(root, text='Creating necessary files.\n Please restart app.')
+    msg = tk.Label(root, text='Creating necessary files.\n Please restart the app.')
     msg.pack()
+
+    f = open('count.txt', 'w')
+    f.close()
+
     root.after(3000, root.destroy)
     root.mainloop()
