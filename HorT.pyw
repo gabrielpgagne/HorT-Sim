@@ -1,6 +1,10 @@
 import random as rd
-import tkinter as tk
 import time
+
+try:
+    import tkinter as tk
+except ImportError:
+    import Tkinter as tk
 
 with open('count.txt', 'r+') as f:
     try:
